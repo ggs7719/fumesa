@@ -27,8 +27,37 @@
 			});
 		});
 	</script>
+
+<script type='text/javascript' src="jquery-1.9.1.min.js"></script>
+<script type='text/javascript'>
+$(function(){
+　$(window).load(function(){
+　　$(window).bind('scroll resize', function(){
+　　var $this = $(this);
+　　var $this_Top=$this.scrollTop();
+
+　　//當高度小於100時，關閉區塊 
+　　if($this_Top < 100){
+　　　$('#top-bar').stop().animate({top:"-65px"});
+　　　}
+　　　　if($this_Top > 100){
+　　　　$('#top-bar').stop().animate({top:"0px"});
+　　　 }
+　　}).scroll();
+　});
+});
+</script>
+
 </head>
+
 <body>
+
+<div id="top-bar">
+	<div id="menu">
+    <p style="color:#fff;text-align:center;font-size:36px">飲酒過量，有害健康</p>
+	</div>
+</div>
+
 <!-- start header -->
 <div class="header_bg">
 <div class="wrap">
@@ -257,7 +286,7 @@
 				        	<p class="para top"><span>福曼莎梅酒</span><br></p>
 							<ul>
 								<li>品名：福曼莎梅酒</li>
-								<li>主要原料：梅子、冰糖</li>
+								<li>主要原料：梅子、糖</li>
 								<li>產品種類：其他水果酒</li>
 								<li>酒精成分：9度</li>
 								<li>容量：750ml</li>
